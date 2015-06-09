@@ -1,0 +1,14 @@
+{
+    "name": "foundation-points",
+    "version": "0.0.1",
+    "private": true,
+    "devDependencies": {
+        "node-sass": "*",
+        "grunt": "*",
+        "grunt-sass": "*",
+        "grunt-sass-convert": "*",
+        "grunt-cssc": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-bowercopy": "*"
+    }
+}
