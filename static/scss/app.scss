@@ -10,10 +10,10 @@ $color-xxlarge: #274389;
 
 $base-size-px: 16px;
 
-$small-breakpoint-px: 40 * $base-size-px - 10px;
-$medium-breakpoint-px: 64 * $base-size-px - 10px;
-$large-breakpoint-px: 90 * $base-size-px - 10px;
-$xlarge-breakpoint-px: 120 * $base-size-px - 10px;
+$small-breakpoint-px: $small-breakpoint/(1em) * $base-size-px;
+$medium-breakpoint-px: $medium-breakpoint/(1em) * $base-size-px;
+$large-breakpoint-px: $large-breakpoint/(1em) * $base-size-px;
+$xlarge-breakpoint-px: $xlarge-breakpoint/(1em) * $base-size-px;
 
 
 .vertical-guide {
@@ -54,7 +54,7 @@ div#grid > * {
 }
 
 #guide-small-breakpoint {
-  left: $small-breakpoint-px;
+  left: $small-breakpoint-px - 10px;
   background-color: $color-small;
 
   &:after {
@@ -62,7 +62,7 @@ div#grid > * {
   }
 }
 #guide-medium-breakpoint {
-  left: $medium-breakpoint-px;
+  left: $medium-breakpoint-px - 10px;
   background-color: $color-medium;
 
   &:after {
@@ -70,7 +70,7 @@ div#grid > * {
   }
 }
 #guide-large-breakpoint {
-  left: $large-breakpoint-px;
+  left: $large-breakpoint-px - 10px;
   background-color: $color-large;
 
   &:after {
@@ -78,7 +78,7 @@ div#grid > * {
   }
 }
 #guide-xlarge-breakpoint {
-  left: $xlarge-breakpoint-px;
+  left: $xlarge-breakpoint-px - 10px;
   background-color: $color-xlarge;
 
   &:after {
