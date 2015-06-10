@@ -13,6 +13,8 @@
 
 <body>
     <div id="debug">
+        <div id="guide-xxsmall-breakpoint" class="vertical-guide"></div>
+        <div id="guide-xsmall-breakpoint" class="vertical-guide"></div>
         <div id="guide-small-breakpoint" class="vertical-guide"></div>
         <div id="guide-medium-breakpoint" class="vertical-guide"></div>
         <div id="guide-large-breakpoint" class="vertical-guide"></div>
@@ -23,11 +25,20 @@
         <div class="small-12 columns">
             <h1>Demo: Foundation breakpoints</h1>
         </div>
-        <div class="small-6 columns">
-            <div id="header" class="large-12 columns"></div>
+        <div class="xxsmall-12 small-6 columns">
+            <div id="status"></div>
+            <strong class="show-for-xxsmall-only">This is visiable only on xxsmall</strong>
+            <strong class="show-for-xsmall-only">This is visiable only on xsmall</strong>
+            <strong class="show-for-small-only">This is visiable only on small</strong>
+            <strong class="show-for-medium-only">This is visiable only on medium</strong>
+            <strong class="show-for-large-only">This is visiable only on large</strong>
+            <strong class="show-for-xlarge-only">This is visiable only on xlarge</strong>
+            <strong class="show-for-xxlarge-only">This is visiable only on xxlarge</strong>
         </div>
-        <div class="small-6 columns">
+        <div class="xxsmall-12 small-6 columns">
             <ul id="breakpoints">
+                <li id="bp-xxsmall"></li>
+                <li id="bp-xsmall"></li>
                 <li id="bp-small"></li>
                 <li id="bp-medium"></li>
                 <li id="bp-large"></li>
@@ -36,99 +47,33 @@
         </div>
     </div>
     <div id="grid" class="row">
-        <div class="small-6 columns">small-6</div>
-        <div class="small-6 columns">small-6</div>
-        <div class="small-4 columns">small-4</div>
-        <div class="small-4 columns">small-4</div>
-        <div class="small-4 columns">small-4</div>
-        <div class="small-3 columns">small-3</div>
-        <div class="small-3 columns">small-3</div>
-        <div class="small-3 columns">small-3</div>
-        <div class="small-3 columns">small-3</div>
-        <div class="small-2 columns">
-            <span class="show-for-small-only">2</span>
-            <span class="show-for-medium-up">small-2</span>
-        </div>
-        <div class="small-2 columns">
-            <span class="show-for-small-only">2</span>
-            <span class="show-for-medium-up">small-2</span>
-        </div>
-        <div class="small-2 columns">
-            <span class="show-for-small-only">2</span>
-            <span class="show-for-medium-up">small-2</span>
-        </div>
-        <div class="small-2 columns">
-            <span class="show-for-small-only">2</span>
-            <span class="show-for-medium-up">small-2</span>
-        </div>
-        <div class="small-2 columns">
-            <span class="show-for-small-only">2</span>
-            <span class="show-for-medium-up">small-2</span>
-        </div>
-        <div class="small-2 columns">
-            <span class="show-for-small-only">2</span>
-            <span class="show-for-medium-up">small-2</span>
-        </div>
-        <div class="small-1 columns">
-            <span class="show-for-small-only">1</span>
-            <span class="show-for-medium-only">1</span>
-            <span class="show-for-large-up">small-1</span>
-        </div>
-        <div class="small-1 columns">
-            <span class="show-for-small-only">1</span>
-            <span class="show-for-medium-only">1</span>
-            <span class="show-for-large-up">small-1</span>
-        </div>
-        <div class="small-1 columns">
-            <span class="show-for-small-only">1</span>
-            <span class="show-for-medium-only">1</span>
-            <span class="show-for-large-up">small-1</span>
-        </div>
-        <div class="small-1 columns">
-            <span class="show-for-small-only">1</span>
-            <span class="show-for-medium-only">1</span>
-            <span class="show-for-large-up">small-1</span>
-        </div>
-        <div class="small-1 columns">
-            <span class="show-for-small-only">1</span>
-            <span class="show-for-medium-only">1</span>
-            <span class="show-for-large-up">small-1</span>
-        </div>
-        <div class="small-1 columns">
-            <span class="show-for-small-only">1</span>
-            <span class="show-for-medium-only">1</span>
-            <span class="show-for-large-up">small-1</span>
-        </div>
-        <div class="small-1 columns">
-            <span class="show-for-small-only">1</span>
-            <span class="show-for-medium-only">1</span>
-            <span class="show-for-large-up">small-1</span>
-        </div>
-        <div class="small-1 columns">
-            <span class="show-for-small-only">1</span>
-            <span class="show-for-medium-only">1</span>
-            <span class="show-for-large-up">small-1</span>
-        </div>
-        <div class="small-1 columns">
-            <span class="show-for-small-only">1</span>
-            <span class="show-for-medium-only">1</span>
-            <span class="show-for-large-up">small-1</span>
-        </div>
-        <div class="small-1 columns">
-            <span class="show-for-small-only">1</span>
-            <span class="show-for-medium-only">1</span>
-            <span class="show-for-large-up">small-1</span>
-        </div>
-        <div class="small-1 columns">
-            <span class="show-for-small-only">1</span>
-            <span class="show-for-medium-only">1</span>
-            <span class="show-for-large-up">small-1</span>
-        </div>
-        <div class="small-1 columns">
-            <span class="show-for-small-only">1</span>
-            <span class="show-for-medium-only">1</span>
-            <span class="show-for-large-up">small-1</span>
-        </div>
+        <div class="xxsmall-6 columns">6</div>
+        <div class="xxsmall-6 columns">6</div>
+        <div class="xxsmall-4 columns">4</div>
+        <div class="xxsmall-4 columns">4</div>
+        <div class="xxsmall-4 columns">4</div>
+        <div class="xxsmall-3 columns">3</div>
+        <div class="xxsmall-3 columns">3</div>
+        <div class="xxsmall-3 columns">3</div>
+        <div class="xxsmall-3 columns">3</div>
+        <div class="xxsmall-2 columns">2</div>
+        <div class="xxsmall-2 columns">2</div>
+        <div class="xxsmall-2 columns">2</div>
+        <div class="xxsmall-2 columns">2</div>
+        <div class="xxsmall-2 columns">2</div>
+        <div class="xxsmall-2 columns">2</div>
+        <div class="xxsmall-1 show-for-small-up columns">1</div>
+        <div class="xxsmall-1 show-for-small-up columns">1</div>
+        <div class="xxsmall-1 show-for-small-up columns">1</div>
+        <div class="xxsmall-1 show-for-small-up columns">1</div>
+        <div class="xxsmall-1 show-for-small-up columns">1</div>
+        <div class="xxsmall-1 show-for-small-up columns">1</div>
+        <div class="xxsmall-1 show-for-small-up columns">1</div>
+        <div class="xxsmall-1 show-for-small-up columns">1</div>
+        <div class="xxsmall-1 show-for-small-up columns">1</div>
+        <div class="xxsmall-1 show-for-small-up columns">1</div>
+        <div class="xxsmall-1 show-for-small-up columns">1</div>
+        <div class="xxsmall-1 show-for-small-up columns">1</div>
     </div>
 
     <script src="static/js/jquery.js"></script>

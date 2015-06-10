@@ -1,7 +1,8 @@
 @import "settings";
 @import "foundation";
 
-
+$color-xxsmall: #FBB735;
+$color-xsmall: #E98931;
 $color-small: #EB403B;
 $color-medium: #B32E37;
 $color-large: #6C2A6A;
@@ -10,6 +11,8 @@ $color-xxlarge: #274389;
 
 $base-size-px: 16px;
 
+$xxsmall-breakpoint-px: $xxsmall-breakpoint/(1em) * $base-size-px;
+$xsmall-breakpoint-px: $xsmall-breakpoint/(1em) * $base-size-px;
 $small-breakpoint-px: $small-breakpoint/(1em) * $base-size-px;
 $medium-breakpoint-px: $medium-breakpoint/(1em) * $base-size-px;
 $large-breakpoint-px: $large-breakpoint/(1em) * $base-size-px;
@@ -25,7 +28,7 @@ $xlarge-breakpoint-px: $xlarge-breakpoint/(1em) * $base-size-px;
   opacity: 0.5;
 }
 
-div#header:before {
+div#status:before {
   font-size: 2em;
   font-weight: bolder;
 }
@@ -33,6 +36,12 @@ div#header:before {
 ul#breakpoints {
   list-style: none;
 
+  li#bp-xxsmall:before {
+    content: "xxsmall-breakpoint: #{$xxsmall-breakpoint}"
+  }
+  li#bp-xsmall:before {
+    content: "xsmall-breakpoint: #{$xsmall-breakpoint}"
+  }
   li#bp-small:before {
     content: "small-breakpoint: #{$small-breakpoint}"
   }
@@ -48,9 +57,38 @@ ul#breakpoints {
 }
 
 div#grid > * {
-  outline: 0.2em solid #fff;
   height: 4em;
+  outline: 0.2em solid #fff;
   text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+#guide-xxsmall-breakpoint {
+  left: $xxsmall-breakpoint-px - 10px;
+  background-color: $color-xxsmall;
+
+  &:after {
+    content: "_#{$xxsmall-breakpoint-px}";
+  }
+}
+
+#guide-xsmall-breakpoint {
+  left: $xsmall-breakpoint-px - 10px;
+  background-color: $color-xsmall;
+
+  &:after {
+    content: "_#{$xsmall-breakpoint-px}";
+  }
+}
+
+#guide-small-breakpoint {
+  left: $small-breakpoint-px - 10px;
+  background-color: $color-small;
+
+  &:after {
+    content: "_#{$small-breakpoint-px}";
+  }
 }
 
 #guide-small-breakpoint {
@@ -88,21 +126,50 @@ div#grid > * {
 
 @media #{$large-only} { }
 
+@media #{$xxsmall-up} { }
+@media #{$xxsmall-only} {
+  h1 {
+    color: $color-xxsmall;
+  }
+  div#status:before {
+    content: "xxsmall-only";
+    color: $color-xxsmall;
+  }
+  div#grid > * {
+    background-color: $color-xxsmall;
+    color: white;
+    font-weight: bold;
+  }
+  html {
+    font-size: 1rem;
+  }
+}
+
+@media #{$xsmall-up} { }
+@media #{$xsmall-only} {
+  h1 {
+    color: $color-xsmall;
+  }
+  div#status:before {
+    content: "xsmall-only";
+    color: $color-xsmall;
+  }
+  div#grid > * {
+    background-color: $color-xsmall;
+  }
+}
+
 @media #{$small-up} { }
 @media #{$small-only} {
   h1 {
     color: $color-small;
   }
-  div#header:before {
+  div#status:before {
     content: "small-only";
     color: $color-small;
   }
   div#grid > * {
     background-color: $color-small;
-    color: lighten(invert($color-small), 20%);
-  }
-  html {
-    font-size: 1rem;
   }
 }
 
@@ -111,16 +178,12 @@ div#grid > * {
   h1 {
     color: $color-medium;
   }
-  div#header:before {
+  div#status:before {
     content: "medium-only";
     color: $color-medium;
   }
   div#grid > * {
     background-color: $color-medium;
-    color: lighten(invert($color-medium), 20%);
-  }
-  html {
-    font-size: 1em;
   }
 }
 
@@ -129,16 +192,12 @@ div#grid > * {
   h1 {
     color: $color-large;
   }
-  div#header:before {
+  div#status:before {
     content: "large-only";
     color: $color-large;
   }
   div#grid > * {
     background-color: $color-large;
-    color: lighten(invert($color-large), 20%);
-  }
-  html {
-    font-size: 1rem;
   }
 }
 
@@ -147,13 +206,12 @@ div#grid > * {
   h1 {
     color: $color-xlarge;
   }
-  div#header:before {
+  div#status:before {
     content: "xlarge-only";
     color: $color-xlarge;
   }
   div#grid > * {
     background-color: $color-xlarge;
-    color: lighten(invert($color-xlarge), 20%);
   }
   html {
     font-size: 1.25rem;
@@ -165,13 +223,12 @@ div#grid > * {
   h1 {
     color: $color-xxlarge;
   }
-  div#header:before {
+  div#status:before {
     content: "xxlarge-only";
     color: $color-xxlarge;
   }
   div#grid > * {
     background-color: $color-xxlarge;
-    color: lighten(invert($color-xxlarge), 20%);
   }
   html {
     font-size: 1.5rem;
